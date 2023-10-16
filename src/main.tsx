@@ -7,7 +7,7 @@ import {NextUIProvider} from '@nextui-org/react'
 
 import "./styles.css";
 import { P2p } from "./P2p";
-
+window.global = globalThis;
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider store={store}>
