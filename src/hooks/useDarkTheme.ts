@@ -15,9 +15,10 @@ export const useDarkTheme = () => {
 
   useEffect(() => {
     if (darkTheme) {
-      document.documentElement.classList.add("dark");
+      document.documentElement.style.backgroundColor = "#18181B"; // Color de fondo oscuro
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.style.backgroundColor = "#F4F4F5"; // Color de fondo claro
+    document.body.style.color = "black";
     }
   }, [darkTheme]);
   return {

@@ -15,7 +15,6 @@ export const PruebaPage = () => {
           alignItems: "center",
           padding: "30px",
           height: "100vh",
-          backgroundColor: darkTheme ? "#18181B" : "#F4F4F5",
         }}
       >
         <Card
