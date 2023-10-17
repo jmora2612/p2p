@@ -66,8 +66,8 @@ export const useAuthStore = () => {
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(setUser));
       dispatch(onLogin({ _id: data._id, name: data.name }));
-    } catch ({ response }: any) {
-      localStorage.clear();
+    } catch ({ response }: any) {      
+      // localStorage.clear();
       dispatch(onLogout());
     }
   };

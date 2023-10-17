@@ -1,10 +1,17 @@
 import { MoonIcon, SunIcon } from "../../shared";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDarkTheme } from "../../hooks/useDarkTheme";
 import { CardBody, Card, Switch } from "@nextui-org/react";
 
 export const PruebaPage = () => {
-  const { handleToggleDarkTheme, navigate, darkTheme } = useDarkTheme();
+  const { handleToggleDarkTheme, navigate, darkTheme, isDarkThemeLoaded } = useDarkTheme();
+  useEffect(() => {
+    // Aplica las clases de tema oscuro después de que el estado del tema oscuro se haya cargado desde localStorage
+    if (isDarkThemeLoaded) {
+      console.log('aaaaa');
+      
+    }
+  }, [darkTheme, isDarkThemeLoaded]);
 
   return (
     <>
@@ -60,7 +67,10 @@ export const PruebaPage = () => {
             <div style={{ position: "absolute", top: 0, right: 0 }}>
               <div style={{ marginBottom: "20px" }}>
                 <Switch
-                  onClick={handleToggleDarkTheme}
+                  onClick={() => {
+                    handleToggleDarkTheme();
+                    console.log('Switch toggled', darkTheme); // Agrega el console.log() aquí
+                  }}
                   defaultSelected
                   size="lg"
                   color="secondary"
