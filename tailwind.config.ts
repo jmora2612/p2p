@@ -11,15 +11,13 @@ export default {
 
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      extend: {
+        colors: {
+          primary: '#C4841D',
+          secondary: '#A1A1AA',
+
+        },
       },
     },
-  },
-  darkMode: "class",
   plugins: [nextui()]
 }
-

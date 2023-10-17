@@ -5,7 +5,7 @@ interface ModoOscuroState {
   }
   
   const initialState: ModoOscuroState = {
-    darkTheme: true, // Puedes establecer el valor inicial según tus necesidades
+    darkTheme: false,
   };
 
 export const darkThemeSlice = createSlice({

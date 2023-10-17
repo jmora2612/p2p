@@ -5,3 +5,10 @@ export interface AuthState {
       errorMessage: string | null;
   };
 }
+
+export interface IDarkTheme {
+  darkTheme:{
+    darkTheme:boolean
+  },
+}
+

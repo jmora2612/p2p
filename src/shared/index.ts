@@ -1,4 +1,4 @@
-export * from "./interfaces/IAuthState"
+export * from "./interfaces/IState"
 export * from "./interfaces/ILogin"
 export * from "./interfaces/IRegister"
 export * from "./interfaces/ILocalStorage"
